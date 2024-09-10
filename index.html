@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa; /* Light cyan background */
+            color: #333;
+        }
+        header {
+            background-color: #00796b; /* Teal background */
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #004d40; /* Darker teal background */
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color: #00796b; /* Teal background on hover */
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff; /* White background for the main container */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #00796b; /* Teal border */
+            padding-bottom: 5px;
+        }
+        .projects img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact form input,
+        .contact form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact form button {
+            padding: 10px;
+            background-color: #00796b; /* Teal background */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact form button:hover {
+            background-color: #004d40; /* Darker teal on hover */
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #00796b; /* Teal background */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Naveen</h1>
+        <p>Web Developer | Designer | Creator</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="SKILLS">SKILLS</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>Hello! I'm Naveen, a passionate web developer with a knack for creating beautiful and functional websites. I love coding and enjoy taking on new challenges.</p>
+        </section>
+        <section id="SKILLS" class="section SKILLS">
+            <h2>SKILLS</h2>
+            
+         <li>Python</li>
+         <li>Java script</li>
+         <li>Html</li>
+         <li>C++</li>
+         
+
+            
+            </div>
+        </section>
+        <section id="contact" class="section contact">
+            <h2>Contact Me</h2>
+            <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Naveen. All rights reserved.</p>
+    </footer>
+</body>
+</html>
