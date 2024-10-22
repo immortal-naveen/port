@@ -3,83 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Naveen's Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e0f7fa; /* Light cyan background */
+            background-color: #f9f9f9; 
             color: #333;
         }
         header {
-            background-color: #00796b; /* Teal background */
+            background-color: #4a90e2; 
             color: white;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
         nav {
             display: flex;
             justify-content: center;
-            background-color: #004d40; /* Darker teal background */
+            background-color: #333; 
         }
         nav a {
             color: white;
-            padding: 14px 20px;
+            padding: 15px 25px;
             text-decoration: none;
             text-transform: uppercase;
+            transition: background-color 0.3s;
         }
         nav a:hover {
-            background-color: #00796b; /* Teal background on hover */
+            background-color: #4a90e2; 
         }
         .container {
-            width: 80%;
+            width: 90%;
             max-width: 1200px;
             margin: 20px auto;
-            padding: 20px;
-            background-color: #ffffff; /* White background for the main container */
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            background-color: #ffffff; 
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
         .section h2 {
-            border-bottom: 2px solid #00796b; /* Teal border */
-            padding-bottom: 5px;
+            border-bottom: 2px solid #4a90e2; 
+            padding-bottom: 10px;
+            font-size: 1.8em;
+            color: #333;
         }
-        .projects img {
-            max-width: 100%;
+        .profile-photo {
+            width: 150px; 
             height: auto;
-            border-radius: 5px;
+            border-radius: 50%; 
+            margin-bottom: 15px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+        }
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .skills-list li {
+            background-color: #4a90e2; 
+            color: white;
+            margin: 5px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .skills-list li:hover {
+            transform: scale(1.05);
         }
         .contact form {
             display: flex;
             flex-direction: column;
         }
         .contact form input,
-        .contact form textarea {
-            margin-bottom: 10px;
+        .contact form textarea,
+        .contact form select {
+            margin-bottom: 15px;
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        .contact form input:focus,
+        .contact form textarea:focus,
+        .contact form select:focus {
+            border-color: #4a90e2; 
         }
         .contact form button {
             padding: 10px;
-            background-color: #00796b; /* Teal background */
+            background-color: #4a90e2; 
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
         .contact form button:hover {
-            background-color: #004d40; /* Darker teal on hover */
+            background-color: #357ab8; 
         }
         footer {
             text-align: center;
-            padding: 10px;
-            background-color: #00796b; /* Teal background */
+            padding: 15px;
+            background-color: #4a90e2; 
             color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
@@ -90,31 +126,36 @@
     </header>
     <nav>
         <a href="#about">About</a>
-        <a href="SKILLS">SKILLS</a>
+        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
     </nav>
     <div class="container">
         <section id="about" class="section">
             <h2>About Me</h2>
+            <img src="Naveen.jpg" alt="Naveen" class="profile-photo">
             <p>Hello! I'm Naveen, a passionate web developer with a knack for creating beautiful and functional websites. I love coding and enjoy taking on new challenges.</p>
         </section>
-        <section id="SKILLS" class="section SKILLS">
-            <h2>SKILLS</h2>
-            
-         <li>Python</li>
-         <li>Java script</li>
-         <li>Html</li>
-         <li>C++</li>
-         
-
-            
-            </div>
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>C++</li>
+            </ul>
         </section>
         <section id="contact" class="section contact">
             <h2>Contact Me</h2>
             <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
+                <select name="subject" required>
+                    <option value="">Select a Subject</option>
+                    <option value="Inquiry">General Inquiry</option>
+                    <option value="Project Proposal">Project Proposal</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Other">Other</option>
+                </select>
                 <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
